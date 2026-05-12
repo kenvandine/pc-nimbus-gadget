@@ -66,6 +66,11 @@ volumes:
         type: 0FC63DAF-8483-4772-8E79-3D69D8477DE4
         size: 1G
 
+kernel-cmdline:
+  append:
+    - quiet
+    - splash
+
 defaults:
   system:
     service.ssh.listen-address: 0.0.0.0
@@ -80,6 +85,10 @@ defaults:
     #environment:
     #  - CHROMIUM_FLAGS="--ignore-gpu-blocklist --disable-gpu-rasterization --disable-gpu"
     #  - DISABLE_WAYLAND_HARDWARE_ACCELERATION=1
+  # Lemonade Server Snap ID
+  PX5yJDL0Zee280zHDiTZbD6xWqFkDucC:
+    environment:
+      - LEMONADE_HOST=0.0.0.0
 
 connections:
   - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:lxd
