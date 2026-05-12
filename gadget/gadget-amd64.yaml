@@ -87,8 +87,7 @@ defaults:
     #  - DISABLE_WAYLAND_HARDWARE_ACCELERATION=1
   # Lemonade Server Snap ID
   PX5yJDL0Zee280zHDiTZbD6xWqFkDucC:
-    environment:
-      - LEMONADE_HOST=0.0.0.0
+    host: 0.0.0.0
 
 connections:
   - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:lxd
