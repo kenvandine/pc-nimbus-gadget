@@ -88,6 +88,9 @@ defaults:
   # Lemonade Server Snap ID
   PX5yJDL0Zee280zHDiTZbD6xWqFkDucC:
     host: 0.0.0.0
+  qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:
+    model-provider: "lemonade"
+    appstore-visible: false
 
 connections:
   - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:lxd
