@@ -1,5 +1,5 @@
 name: pc
-version: 'lemonade-24-0.2'
+version: 'amd-24-0.2'
 type: gadget
 base: core24
 summary: PC gadget for generic devices
