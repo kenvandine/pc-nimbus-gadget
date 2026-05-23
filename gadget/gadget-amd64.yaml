@@ -89,7 +89,7 @@ defaults:
   PX5yJDL0Zee280zHDiTZbD6xWqFkDucC:
     host: 0.0.0.0
   qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:
-    model-provider: "lemonade"
+    model-provider: "lemonade-server"
     appstore-visible: false
 
 connections:
