@@ -70,6 +70,8 @@ kernel-cmdline:
   append:
     - quiet
     - splash
+    # Disable NXP NCI I2C (NFC) driver — generates an IRQ storm on AMD hardware
+    - modprobe.blacklist=nxp_nci_i2c
 
 defaults:
   system:
@@ -80,17 +82,19 @@ defaults:
   # Chromium Snap ID
   XKEcBqPM06H1Z7zGOdG5fbICuf8NWK5R:
     daemon: true
-    url: "http://127.0.0.1:8000"
+    url: "http://127.0.0.1"
     # Force Chromium to use simpler Wayland rendering
     #environment:
     #  - CHROMIUM_FLAGS="--ignore-gpu-blocklist --disable-gpu-rasterization --disable-gpu"
     #  - DISABLE_WAYLAND_HARDWARE_ACCELERATION=1
   # Lemonade Server Snap ID
   PX5yJDL0Zee280zHDiTZbD6xWqFkDucC:
-    host: 0.0.0.0
+    environment:
+      - LEMONADE_HOST=0.0.0.0
+  #  host: 0.0.0.0
   qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:
     model-provider: "lemonade-server"
-    appstore-visible: false
+    appstore-visible: true
 
 connections:
   - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:lxd
@@ -111,6 +115,8 @@ connections:
     slot: system:network-observe
   - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:network-control
     slot: system:network-control
+  - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:system-observe
+    slot: system:system-observe
   #- plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:snapd-control
   #  slot: PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4:snapd-control
   #- plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:shutdown
