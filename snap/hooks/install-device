@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+# Gadget connections: entries handle snap-to-snap connections (lxd,
+# network-manager) automatically, but connections to system: slots
+# (network-control, network-observe, system-observe) are silently skipped
+# without a store auto-connect assertion.  Establish them explicitly here.
+
+log() { echo "[install-device] $*"; }
+
+connect() {
+    log "connecting $1"
+    snap connect "$1" || log "WARNING: snap connect $1 failed (exit $?)"
+}
+
+connect nimbus:network-control
+connect nimbus:network-observe
+connect nimbus:system-observe
