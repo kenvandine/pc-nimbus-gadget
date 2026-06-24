@@ -95,6 +95,7 @@ defaults:
   qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:
     model-provider: "lemonade-server"
     appstore-visible: true
+    appstore-type: nimbus
 
 connections:
   - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:lxd
