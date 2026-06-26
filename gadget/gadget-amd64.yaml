@@ -118,6 +118,8 @@ connections:
     slot: system:network-control
   - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:system-observe
     slot: system:system-observe
+  - plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:firewall-control
+    slot: system:firewall-control
   #- plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:snapd-control
   #  slot: PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4:snapd-control
   #- plug: qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:shutdown
