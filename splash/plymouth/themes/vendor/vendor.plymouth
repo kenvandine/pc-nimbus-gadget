@@ -5,4 +5,4 @@ ModuleName=script
 
 [script]
 ImageDir=/
-ScriptFile=/usr/share/plymouth/themes/ubuntu-core/ubuntu-core.script
+ScriptFile=/run/mnt/gadget/splash/plymouth/themes/vendor/vendor.script
