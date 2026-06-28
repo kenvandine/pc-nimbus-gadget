@@ -1,0 +1,30 @@
+
+  _   _ _           _
+ | \ | (_)_ __ ___ | |__  _   _ ___
+ |  \| | | '_ ` _ \| '_ \| | | / __|
+ | |\  | | | | | | | |_) | |_| \__ \
+ |_| \_|_|_| |_| |_|_.__/ \__,_|___/  Local AI Appliance
+
+ Nimbus runs open-source AI models on your own hardware.
+ No cloud. No subscriptions. Your data stays here.
+
+ ── Access ──────────────────────────────────────────────────
+
+   Web interface:   http://nimbus.local
+   Or by IP:        http://<this device's IP address>
+
+ ── First-time setup ─────────────────────────────────────────
+
+   1. Connect a phone or tablet to the Nimbus Wi-Fi hotspot
+   2. The setup portal opens automatically — follow the steps
+      to join your network and create your admin account
+   3. Open http://nimbus.local to start using Nimbus
+
+ ── Useful commands ──────────────────────────────────────────
+
+   View logs:       sudo journalctl -u snap.nimbus.nimbus -f
+   Restart:         sudo snap restart nimbus
+   Snap services:   snap services nimbus
+
+ ─────────────────────────────────────────────────────────────
+
