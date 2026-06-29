@@ -1,8 +1,0 @@
-[Plymouth Theme]
-Name=Vendor
-Description=Nimbus vendor boot splash
-ModuleName=script
-
-[script]
-ImageDir=/
-ScriptFile=/usr/share/plymouth/themes/ubuntu-core/ubuntu-core.script
