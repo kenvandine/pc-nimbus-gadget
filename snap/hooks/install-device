@@ -13,6 +13,7 @@ connect() {
     snap connect "$1" || log "WARNING: snap connect $1 failed (exit $?)"
 }
 
+connect nimbus:hardware-observe
 connect nimbus:network-control
 connect nimbus:network-observe
 connect nimbus:system-observe
