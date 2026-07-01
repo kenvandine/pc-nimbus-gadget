@@ -1,0 +1,16 @@
+name: Promote candidate to stable
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install snapcraft
+        run: sudo snap install snapcraft --classic
+
+      - name: Promote latest/candidate to latest/stable
+        env:
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
+        run: snapcraft promote pc-nimbus --from-channel latest/candidate --to-channel latest/stable --yes

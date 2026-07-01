@@ -1,0 +1,23 @@
+name: Publish to edge
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build snap (amd64)
+        uses: snapcore/action-build@v1
+        id: build
+
+      - name: Publish to edge
+        uses: snapcore/action-publish@v1
+        env:
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
+        with:
+          snap: ${{ steps.build.outputs.snap }}
+          release: edge
