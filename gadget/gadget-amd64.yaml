@@ -60,6 +60,12 @@ volumes:
         # min-size to allow remodeling from previous releases
         min-size: 16M
         size: 32M
+      # Reserved for sideloading model files (e.g. GGUF checkpoints) at image
+      # build time; unused space is harmless if a given image doesn't need it.
+      - name: nimbus-sideload
+        filesystem: ext4
+        type: 0FC63DAF-8483-4772-8E79-3D69D8477DE4
+        size: 8000M
       - name: ubuntu-data
         role: system-data
         filesystem: ext4
