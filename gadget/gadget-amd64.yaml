@@ -86,15 +86,10 @@ defaults:
   XKEcBqPM06H1Z7zGOdG5fbICuf8NWK5R:
     daemon: true
     url: "http://127.0.0.1"
-    # Force Chromium to use simpler Wayland rendering
-    #environment:
-    #  - CHROMIUM_FLAGS="--ignore-gpu-blocklist --disable-gpu-rasterization --disable-gpu"
-    #  - DISABLE_WAYLAND_HARDWARE_ACCELERATION=1
   # Lemonade Server Snap ID
   PX5yJDL0Zee280zHDiTZbD6xWqFkDucC:
     environment:
       - LEMONADE_HOST=0.0.0.0
-  #  host: 0.0.0.0
   qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:
     model-provider: "lemonade-server"
     appstore-visible: true
