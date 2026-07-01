@@ -1,4 +1,5 @@
 name: pc-nimbus
+title: Nimbus PC Gadget
 version: 'amd-24-0.2'
 type: gadget
 base: core24
@@ -8,6 +9,11 @@ description: |
 confinement: strict
 grade: stable
 icon: icon.png
+license: GPL-3.0-only
+contact: https://github.com/kenvandine/pc-nimbus-gadget/issues
+issues: https://github.com/kenvandine/pc-nimbus-gadget/issues
+source-code: https://github.com/kenvandine/pc-nimbus-gadget
+website: https://github.com/kenvandine/pc-nimbus-gadget
 
 platforms:                                                                      
   amd64:                                                                        
