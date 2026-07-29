@@ -96,6 +96,7 @@ defaults:
   PX5yJDL0Zee280zHDiTZbD6xWqFkDucC:
     environment:
       - LEMONADE_HOST=0.0.0.0
+    lemonade-allowed-origins: "*"
   qhSCSjzxNobpziJD4QLbkDDqH0nxpYHq:
     model-provider: "lemonade-server"
     appstore-visible: true
